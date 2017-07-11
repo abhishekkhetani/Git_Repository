@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Saver</title>
+
+    <!-- master_template Start-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="app/views/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <link href="app/views/css/styles.css" rel="stylesheet">
+    <!-- master_template End-->
+
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('main.js').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app>Loading AppComponent content here ...</my-app>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+       <script src="https://code.jquery.com/jquery.js"></script>
+       <!-- jQuery UI -->
+       <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+       <!-- Include all compiled plugins (below), or include individual files as needed -->
+       <script src="app/views/bootstrap/js/bootstrap.min.js"></script>
+
+       <link rel="stylesheet" href="app/views/vendors/morris/morris.css">
+
+
+       <script src="app/views/vendors/jquery.knob.js"></script>
+       <script src="app/views/vendors/raphael-min.js"></script>
+       <script src="app/views/vendors/morris/morris.min.js"></script>
+
+       <script src="app/views/vendors/flot/jquery.flot.js"></script>
+       <script src="app/views/vendors/flot/<jqu></jqu>ery.flot.categories.js"></script>
+       <script src="app/views/vendors/flot/jquery.flot.pie.js"></script>
+       <script src="app/views/vendors/flot/jquery.flot.time.js"></script>
+       <script src="app/views/vendors/flot/jquery.flot.stack.js"></script>
+       <script src="app/views/vendors/flot/jquery.flot.resize.js"></script>
+
+       <script src="app/views/js/custom.js"></script>
+       <script src="app/views/js/stats.js"></script>
+
+
+  </body>
+</html>
