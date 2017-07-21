@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
      templateUrl: 'app/views/header.html'
 })
 export class HeaderComponent {
-  public title: string = 'Project Saver';    //Project Title
+  title: string = 'Project Saver';    //Project Title
   
     constructor(private route: ActivatedRoute) { }
 }

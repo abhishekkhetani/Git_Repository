@@ -6,7 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
      templateUrl: 'app/views/navbar.html'
 })
 export class NavComponent {
-  public  nav: any[] = ["index", "settings","login"]; //Navigation bar URLs
+  nav: any[] = ["index", "settings","login"]; //Navigation bar URLs
   
     constructor(private route: ActivatedRoute) { }
 }

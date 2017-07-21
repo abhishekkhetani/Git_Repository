@@ -12,25 +12,14 @@ import {NavComponent} from './navbar.component';
 
 
 export const appRoutes: Routes = [
-  {
-    path: 'index', component: ProfileComponent, children: [
-      { path: 'header', component: HeaderComponent, pathMatch: 'full', outlet: 'header' },
-      { path: 'navbar', component: NavComponent, pathMatch: 'full', outlet: 'navbar' },
-      { path: 'footer', component: FooterComponent, pathMatch: 'full', outlet: 'footer' }
-    ]
-  },
-  {
-    path: 'settings', component: SettingsComponent, children: [
-      { path: 'settings', component: HeaderComponent, pathMatch: 'full', outlet: 'header'},
-      { path: 'settings', component: NavComponent, pathMatch: 'full', outlet: 'navbar' },
-      { path: 'settings', component: FooterComponent, pathMatch: 'full', outlet: 'footer' }
-    ]
-  }
+  {path: 'index', component: ProfileComponent},
+  {path: 'settings', component: SettingsComponent},
+  {path: 'login', component: LoginComponent}
 ]
 
 @NgModule({
     imports: [
-        RouterModule.forChild(appRoutes)
+        RouterModule.forRoot(appRoutes)
     ],
     exports: [ RouterModule ]
 })

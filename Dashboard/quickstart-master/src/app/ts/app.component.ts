@@ -14,7 +14,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 export class AppComponent{
   //name = 'Abhishek!';
-public  showView: boolean = true;
+  showView: boolean = true;
+  title: string = 'Project Saver';    //Project Title
+  nav: any[] = ["index", "settings","login"]; //Navigation bar URLs
 
   constructor(router: Router, routerActive: ActivatedRoute) {
 
