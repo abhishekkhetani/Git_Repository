@@ -1,13 +1,27 @@
-import { Component } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { GlobalEventsManager } from '../shared/global-events-manager.service';
+import { AuthenticationService } from '../authentication';
+import { Router, CanActivate } from '@angular/router';
 
 @Component({
   selector: 'footer',
-  //template: `<h1>Hello {{name}}</h1>`,
-  templateUrl: './footer.html'
-  //styleUrls: ['./app/Views/environment_app.component.css']
+  templateUrl: 'footer.component.html'
+  //styleUrls: ['./app/Views/environment_app.component.']
 })
-export class FooterComponent  {
-  //name = 'Abhishek!';
-  constructor(private route: ActivatedRoute) { }
+export class FooterComponent  implements OnInit {
+      showFooter = false;
+    // constructor(private globalEventsManager: GlobalEventsManager, private authenticationService: AuthenticationService,
+    // private router: Router) {
+    //     this.globalEventsManager.showNavBarEmitter.subscribe((mode) => {
+    //           this.showFooter = mode;
+    //     });
+    // }
+
+     ngOnInit() { }
+
+    // logout() {
+    //     this.authenticationService.logout();
+    //     this.showFooter = false;
+    //     this.router.navigate(['/login']);
+    // }
 }

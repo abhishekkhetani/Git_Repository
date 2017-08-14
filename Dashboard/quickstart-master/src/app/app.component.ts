@@ -1,28 +1,29 @@
-import { Component, NgModule } from '@angular/core';
-
-// Import router directives
+import { Component } from '@angular/core';
+import { AuthenticationService } from './authentication';
 import { Router, ActivatedRoute } from '@angular/router';
-//import { asd } from '../views/
+// import { asd } from '../views/
 
 // Decorator
 @Component({
   selector: 'my-app',
-  // template: `<h1>Hello {{name}}</h1>`,
-  templateUrl: 'app/app.component.html'
-  //styleUrls: ['./app/Views/environment_app.component.css']
+  templateUrl: './app.component.html'
+  // styleUrls: ['./app/Views/environment_app.component.css']
 })
 
 export class AppComponent {
-  //name = 'Abhishek!';
+  // name = 'Abhishek!';
 
-  
-  constructor(router: Router, routerActive: ActivatedRoute) {
+  // constructor(private authService: AuthenticationService) {
+  //  }
 
-    router.events.subscribe((url: any) => console.log(url));
-    //console.log(router.url);  // to print only path eg:"/login"
-    //(router.url == "/login") ? this.showView = false : this.showView = true;
-    //console.log(this.showView);
-    
+   constructor(private authService: AuthenticationService, router: Router, routerActive: ActivatedRoute) {
+
+  //   router.events.subscribe((url: any) => console.log(url));
+  //   //console.log(router.url);  // to print only path eg:"/login"
+  //   //(router.url == "/login") ? this.showView = false : this.showView = true;
+  //   //console.log(this.showView);
+
+  // }
+
   }
-
 }
