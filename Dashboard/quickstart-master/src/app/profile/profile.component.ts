@@ -4,9 +4,9 @@ import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'my-profile',
   templateUrl: 'profile.component.html'
-  //styleUrls: ['./app/Views/environment_app.component.css']
+  // styleUrls: ['./app/Views/environment_app.component.css']
 })
 export class ProfileComponent  {
-  //name = 'Abhishek!';
+  // name = 'Abhishek!';
   constructor(private route: ActivatedRoute) { }
 }
