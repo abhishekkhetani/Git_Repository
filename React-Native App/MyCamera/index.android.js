@@ -21,25 +21,25 @@ import LoadingSpinnerOverlay from 'react-native-smart-loading-spinner-overlay';
 import 'whatwg-fetch';
 
 export default class MyCamera extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props);
     this.state = {
-      data: []
-    }
+      data: ''
+    };
   }
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
+        {/*<Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
-        <Text style={styles.instructions}>
+         <Text style={styles.instructions}>
           To get started, edit index.android.js
         </Text>
         <Text style={styles.instructions}>
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
-        </Text>
+        </Text> */}
         <Text style={styles.instructions}>
           {this.state.data}
         </Text>
@@ -116,10 +116,19 @@ export default class MyCamera extends Component {
       body: JSON.stringify({ 'request' : requests })
     })
       //.then(checkStatus)
-      .then(function(response) {alert(response);})
+      .then(function(response){
+        return response.json();
+      })
+      .then(response => {
+        //alert(data);
+        this.setState({
+          data : response.error.message
+        });
+        //alert(response.error.message);
+      })
       .catch(function(error) {
           console.log('request failed', error);
-          alert(error.error.code);
+          alert(error);
     });
 
     setTimeout(
