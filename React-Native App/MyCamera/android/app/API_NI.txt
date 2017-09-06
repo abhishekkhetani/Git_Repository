@@ -1,0 +1,33 @@
+EFAX_PLUS_EUR_1100_1MO_NOACT_30DAY_150PGIFT_1350SEND
+
+
+EFAX_PLUS_EUR_1100_1MO_NOACT_30DAY_150PGIFT_1350SEND
+
+
+
+
+- OFFERCODEController: 
+
+~ (If offercode is in cookie):
+
+http://qa.portal.efax.nl/fapi-sf/sitefinity/getOffercode?OFFERCODE=EFAX_PLUS_EUR_1100_1MO_NOACT_30DAY_150PGIFT_1350SEND&country=US&plan=PLUS&billing_period=1
+
+~ (If Offercode is not in Cookie):
+
+http://qa.portal.efax.nl/fapi-sf/sitefinity/getOffercode?OFFERCODE=EFAX_PLUS_EUR_1100_1MO_NOACT_30DAY_150PGIFT_1350SEND&domain=US&country=US&plan=PLUS&billing_period=1
+
+
+- OFFERCODEPricingController:
+
+~ (IF offercode is in cookie):
+
+http://qa.portal.efax.nl/fapi-sf/sitefinity/getOffercode?OFFERCODE=EFAX_PLUS_EUR_1100_1MO_NOACT_30DAY_150PGIFT_1350SEND&brand=efaxi&domain=efax.nl&country=US&plan=PLUS&billingPeriod=1
+
+~ (If Offercode is not in Cookie):
+
+http://qa.portal.efax.nl/fapi-sf/sitefinity/getOffercode?brand=efaxi&domain=efax.nl&country=US&plan=PLUS&billingPeriod=1
+
+
+- OfferContentController:
+
+http://qa.portal.efax.nl/fapi-sf/sitefinity/getOfferCodeDetail?OFFERCODE=EFAX_PLUS_1295_30DAY
